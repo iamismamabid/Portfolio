@@ -1195,85 +1195,97 @@ textarea.form-input {
 }
 
 /* ==========================================================================
-   3D Transparent Avatar & Orbit Styles
+   3D Transparent Avatar & Orbit Styles (Modern Premium Circular Style)
    ========================================================================== */
 .avatar-container {
   position: relative;
-  width: 340px;
-  height: 380px;
+  width: 360px;
+  height: 360px;
   display: flex;
   justify-content: center;
-  align-items: flex-end; /* Align card and image to the bottom */
+  align-items: center;
   margin: 0 auto;
   z-index: 2;
 }
 
-.avatar-card {
+.avatar-frame {
   position: relative;
-  width: 280px;
-  height: 280px;
-  border-radius: var(--border-radius-lg);
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  box-shadow: var(--shadow);
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  padding: 5px; /* The width of the premium gradient border */
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+  z-index: 3;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+              0 0 50px rgba(var(--accent-rgb), 0.25),
+              inset 0 0 15px rgba(255, 255, 255, 0.1);
+  transition: transform var(--transition-elastic), box-shadow var(--transition-normal);
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  z-index: 2;
-  overflow: visible; /* Let the image pop out at the top */
+  align-items: center;
 }
 
-.avatar-glow {
-  position: absolute;
-  width: 240px;
-  height: 240px;
+.avatar-img-wrapper {
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.25) 0%, rgba(var(--accent-secondary-rgb), 0.15) 50%, transparent 70%);
-  filter: blur(25px);
-  z-index: 1;
-  bottom: 20px;
-  animation: pulseAvatarGlow 4s infinite alternate ease-in-out;
-}
-
-.avatar-orbit {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px dashed rgba(var(--accent-rgb), 0.2);
-  z-index: 2;
-  pointer-events: none;
-}
-
-.avatar-orbit.ring-1 {
-  width: 320px;
-  height: 320px;
-  top: -20px;
-  animation: rotateOrbit 20s linear infinite;
-}
-
-.avatar-orbit.ring-2 {
-  width: 260px;
-  height: 260px;
-  top: 10px;
-  border: 1px dashed rgba(var(--accent-secondary-rgb), 0.15);
-  animation: rotateOrbitReverse 30s linear infinite;
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-secondary);
 }
 
 .avatar-img {
-  position: absolute;
-  bottom: -15px;
-  width: auto;
-  height: 410px;
-  max-width: 100%;
-  object-fit: contain;
-  z-index: 4;
-  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.45));
-  transition: transform var(--transition-slow) var(--transition-elastic);
-  transform-origin: bottom center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%; /* Focus on the face */
+  transition: transform var(--transition-slow);
+}
+
+/* Hover effects */
+.avatar-container:hover .avatar-frame {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 
+              0 0 60px rgba(var(--accent-secondary-rgb), 0.35);
 }
 
 .avatar-container:hover .avatar-img {
-  transform: scale(1.06) translateY(-5px);
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+  transform: scale(1.08);
+}
+
+/* Glow Background */
+.avatar-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.3) 0%, rgba(var(--accent-secondary-rgb), 0.15) 50%, transparent 70%);
+  filter: blur(35px);
+  z-index: 1;
+  pointer-events: none;
+  animation: pulseAvatarGlow 4s infinite alternate ease-in-out;
+}
+
+/* Orbit Rings */
+.avatar-orbit {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.avatar-orbit.ring-1 {
+  width: 350px;
+  height: 350px;
+  border: 1px dashed rgba(var(--accent-rgb), 0.25);
+  animation: rotateOrbit 25s linear infinite;
+}
+
+.avatar-orbit.ring-2 {
+  width: 315px;
+  height: 315px;
+  border: 1px dotted rgba(var(--accent-secondary-rgb), 0.3);
+  animation: rotateOrbitReverse 35s linear infinite;
 }
 
 /* Floating Tech Icons */
@@ -1295,22 +1307,22 @@ textarea.form-input {
 }
 
 .floating-tech-icon.react-icon {
-  top: 10%;
-  right: 5%;
+  top: 5%;
+  right: 2%;
   color: #61dafb;
   animation-delay: 0s;
 }
 
 .floating-tech-icon.node-icon {
-  bottom: 15%;
-  left: 2%;
+  bottom: 12%;
+  left: -2%;
   color: #68a063;
   animation-delay: 1.5s;
 }
 
 .floating-tech-icon.mongo-icon {
-  bottom: 8%;
-  right: 8%;
+  bottom: 5%;
+  right: 2%;
   color: #13aa52;
   animation-delay: 0.7s;
 }
@@ -1349,26 +1361,23 @@ textarea.form-input {
 @media (max-width: 992px) {
   .avatar-container {
     width: 300px;
-    height: 340px;
+    height: 300px;
     margin-top: var(--spacing-lg);
   }
-  .avatar-card {
-    width: 240px;
-    height: 240px;
+  .avatar-frame {
+    width: 230px;
+    height: 230px;
   }
-  .avatar-img {
-    width: auto;
-    height: 345px;
-    bottom: -12px;
+  .avatar-glow {
+    width: 250px;
+    height: 250px;
   }
   .avatar-orbit.ring-1 {
     width: 280px;
     height: 280px;
-    top: -20px;
   }
   .avatar-orbit.ring-2 {
-    width: 220px;
-    height: 220px;
-    top: 10px;
+    width: 250px;
+    height: 250px;
   }
 }
