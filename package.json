@@ -1,0 +1,10 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Premium CSE Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 8080"
+  },
+  "dependencies": {}
+}

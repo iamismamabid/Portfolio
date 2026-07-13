@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Ismam Abid - 4th Year CSE B.Sc. student at East Delta University. MERN Stack & Software Developer, creator of ismamstudio.me.">
+  <title>Ismam Abid | MERN & Software Developer | CSE East Delta University</title>
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Custom Cursor Trail -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-code text-gradient"></i> Ismam<span>.dev</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <canvas class="hero-canvas" id="hero-canvas"></canvas>
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <span class="badge hero-tag">Available for Opportunities</span>
+        <h1 class="hero-title">Engineering <span class="gradient-text">MERN Stack</span> &amp; <span class="gradient-text">Software Solutions</span></h1>
+        <div class="hero-subtitle" id="hero-subtitle"></div>
+        <p class="hero-description">
+          4th year Computer Science &amp; Engineering student at East Delta University specializing in full-stack JavaScript application development and creator of ismamstudio.me.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">Explore Work <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="avatar-container">
+          <div class="avatar-card glass">
+            <div class="avatar-glow"></div>
+            <div class="avatar-orbit ring-1"></div>
+            <div class="avatar-orbit ring-2"></div>
+            <img src="ismam_abid_photo.png" alt="Ismam Abid" class="avatar-img">
+          </div>
+          <div class="floating-tech-icon react-icon" title="React / Next.js"><i class="fa-brands fa-react"></i></div>
+          <div class="floating-tech-icon node-icon" title="Node.js / Express"><i class="fa-brands fa-node-js"></i></div>
+          <div class="floating-tech-icon mongo-icon" title="MongoDB"><i class="fa-solid fa-database"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title reveal">About Me</h2>
+      <div class="about-grid">
+        <div class="about-details reveal">
+          <p class="about-text">
+            I am a 4th-year Computer Science &amp; Engineering student at East Delta University. I focus on MERN stack developments, designing robust RESTful APIs, and building active software solutions like Ismam Studio to simplify Kindle Direct Publishing (KDP) assets.
+          </p>
+          <p class="about-text">
+            From crafting automated puzzle generators using Next.js to building real-time databases and software architecture, I love turning complex logic into premium, user-friendly experiences.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card glass">
+              <div class="stat-number">4th</div>
+              <div class="stat-label">Year CSE</div>
+            </div>
+            <div class="stat-card glass">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-card glass">
+              <div class="stat-number">1k+</div>
+              <div class="stat-label">Active Users</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-info-grid reveal">
+          <div class="info-item glass">
+            <span class="info-label">Education</span>
+            <span class="info-value">B.Sc. in CSE, East Delta University</span>
+          </div>
+          <div class="info-item glass">
+            <span class="info-label">Core Focus</span>
+            <span class="info-value">MERN &amp; Software Dev</span>
+          </div>
+          <div class="info-item glass">
+            <span class="info-label">SaaS Project</span>
+            <span class="info-value"><a href="https://www.ismamstudio.me" target="_blank" style="color: var(--accent);">ismamstudio.me</a></span>
+          </div>
+          <div class="info-item glass">
+            <span class="info-label">Location</span>
+            <span class="info-value">Chittagong, Bangladesh</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal">Technical Arsenal</h2>
+      <div class="skills-container">
+        <!-- Systems & Backend -->
+        <div class="skills-category glass reveal">
+          <h3 class="skills-category-title"><i class="fa-solid fa-code"></i> Frontend Stack</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>React.js / Next.js</span>
+                <span>92%</span>
+              </div>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar-fill" data-percent="92%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>JavaScript / TypeScript</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar-fill" data-percent="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Tailwind CSS &amp; CSS3</span>
+                <span>94%</span>
+              </div>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar-fill" data-percent="94%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend Stack -->
+        <div class="skills-category glass reveal">
+          <h3 class="skills-category-title"><i class="fa-solid fa-server"></i> Backend Stack</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Node.js / Express.js</span>
+                <span>88%</span>
+              </div>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar-fill" data-percent="88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>MongoDB &amp; Mongoose</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar-fill" data-percent="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>REST APIs &amp; Security</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar-fill" data-percent="90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Software Engineering -->
+        <div class="skills-category glass reveal">
+          <h3 class="skills-category-title"><i class="fa-solid fa-gears"></i> Tools &amp; Methodologies</h3>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Git / Git Workflows</span>
+                <span>88%</span>
+              </div>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar-fill" data-percent="88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Docker &amp; Deployment</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar-fill" data-percent="75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>CI/CD &amp; Hosting (Vercel)</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar-fill" data-percent="80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">Featured Implementations</h2>
+      <div class="projects-filter reveal">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="systems">Systems</button>
+        <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+        <button class="filter-btn" data-filter="web-apps">Web Apps</button>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card glass reveal" data-category="web-apps">
+          <div class="project-image-container">
+            <svg width="100%" height="100%" style="background:#0b1528;">
+              <defs>
+                <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#3b82f6" />
+                  <stop offset="100%" stop-color="#a855f7" />
+                </linearGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#g1)" opacity="0.15" />
+              <text x="50%" y="45%" fill="#3b82f6" font-family="'Fira Code', monospace" font-size="16" font-weight="bold" text-anchor="middle">ISMAM STUDIO</text>
+              <text x="50%" y="60%" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">All-in-One KDP Toolkit</text>
+            </svg>
+            <div class="project-overlay">
+              <div class="project-tags">
+                <span class="badge">Next.js</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">MongoDB</span>
+                <span class="badge">SaaS</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Ismam Studio</h3>
+            <p class="project-description">
+              An all-in-one KDP Book creation toolkit featuring automated puzzle editors, cryptogram formatters, math worksheet generators, and metadata builders for Kindle Direct Publishing creators.
+            </p>
+            <div class="project-links">
+              <a href="https://www.ismamstudio.me" target="_blank" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Website</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass reveal" data-category="web-apps">
+          <div class="project-image-container">
+            <svg width="100%" height="100%" style="background:#0b1528;">
+              <rect width="100%" height="100%" fill="url(#g1)" opacity="0.15" />
+              <text x="50%" y="45%" fill="#a855f7" font-family="'Fira Code', monospace" font-size="16" font-weight="bold" text-anchor="middle">EDU COURSE ADVISOR</text>
+              <text x="50%" y="60%" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">Course Graph Visualizer &amp; Advisor</text>
+            </svg>
+            <div class="project-overlay">
+              <div class="project-tags">
+                <span class="badge">React</span>
+                <span class="badge">Express</span>
+                <span class="badge">MongoDB</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">EDU Course Advisor</h3>
+            <p class="project-description">
+              Interactive course advisor portal built to map pre-requisite curriculum paths at East Delta University, showcasing direct dependency DAG paths for student enrollment plans.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Source</a>
+              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass reveal" data-category="systems">
+          <div class="project-image-container">
+            <svg width="100%" height="100%" style="background:#0b1528;">
+              <rect width="100%" height="100%" fill="url(#g1)" opacity="0.15" />
+              <text x="50%" y="45%" fill="#3b82f6" font-family="'Fira Code', monospace" font-size="16" font-weight="bold" text-anchor="middle">SYNAPSE GATEWAY</text>
+              <text x="50%" y="60%" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">Real-time WebSocket PubSub Server</text>
+            </svg>
+            <div class="project-overlay">
+              <div class="project-tags">
+                <span class="badge">Node.js</span>
+                <span class="badge">WebSockets</span>
+                <span class="badge">Redis</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Synapse Real-time Gateway</h3>
+            <p class="project-description">
+              A light-weight microservice API handling real-time WebSocket connection pools. Implemented in Node.js with Redis backplane for message synchronization across load-balanced instances.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Source</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass reveal" data-category="ai-ml">
+          <div class="project-image-container">
+            <svg width="100%" height="100%" style="background:#0b1528;">
+              <rect width="100%" height="100%" fill="url(#g1)" opacity="0.15" />
+              <text x="50%" y="45%" fill="#10b981" font-family="'Fira Code', monospace" font-size="16" font-weight="bold" text-anchor="middle">NEUROSEARCH API</text>
+              <text x="50%" y="60%" fill="#9ca3af" font-family="sans-serif" font-size="12" text-anchor="middle">Semantic Vector Search Engine</text>
+            </svg>
+            <div class="project-overlay">
+              <div class="project-tags">
+                <span class="badge">FastAPI</span>
+                <span class="badge">PyTorch</span>
+                <span class="badge">MongoDB</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">NeuroSearch Engine</h3>
+            <p class="project-description">
+              Full-stack MERN application that interfaces with a FastAPI/PyTorch AI backend. Performs vector search indexing on text blocks, supporting modern text similarity searches.
+            </p>
+            <div class="project-links">
+              <a href="#" class="project-link"><i class="fa-brands fa-github"></i> Source</a>
+              <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> API Docs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-title reveal">Professional Timeline</h2>
+      <div class="timeline">
+        <!-- Milestone 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <div class="timeline-date">2025 - Present</div>
+            <h3 class="timeline-role">Founder &amp; Lead Developer</h3>
+            <h4 class="timeline-company">Ismam Studio</h4>
+            <p class="timeline-desc">Designed, developed, and deployed ismamstudio.me, a production-grade KDP creator platform. Scaled tools to active users and managed Next.js application lifecycle with Vercel.</p>
+          </div>
+        </div>
+        <!-- Milestone 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <div class="timeline-date">2023 - Expected 2027</div>
+            <h3 class="timeline-role">B.Sc. in Computer Science &amp; Engineering</h3>
+            <h4 class="timeline-company">East Delta University</h4>
+            <p class="timeline-desc">4th year undergraduate student. Studying core software engineering principles, advanced database systems, algorithms analysis, and distributed web paradigms.</p>
+          </div>
+        </div>
+        <!-- Milestone 3 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <div class="timeline-date">2024 - 2025</div>
+            <h3 class="timeline-role">Full-Stack MERN Developer Intern</h3>
+            <h4 class="timeline-company">InnoTech Solutions</h4>
+            <p class="timeline-desc">Assisted in developing central REST APIs using Node.js and Express. Refactored layout components with Tailwind CSS and designed custom dashboard widgets.</p>
+          </div>
+        </div>
+        <!-- Milestone 4 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <div class="timeline-date">2023</div>
+            <h3 class="timeline-role">Independent Web Contractor</h3>
+            <h4 class="timeline-company">Freelance</h4>
+            <p class="timeline-desc">Built custom responsive landing pages, portfolio sites, and corporate presentation modules using JavaScript, CSS3 variables, and HTML5.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">Initialize Connection</h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div>
+            <h3 class="contact-subtitle">Get in Touch</h3>
+            <p class="contact-desc">Have a technical project or a complex infrastructure bottleneck you need to resolve? Reach out, and let's build the solution.</p>
+          </div>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon glass"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-val"><a href="mailto:contact@ismamstudio.me" style="color: var(--accent);">contact@ismamstudio.me</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon glass"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <div class="contact-label">Location</div>
+                <div class="contact-val">Chittagong, Bangladesh</div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com" target="_blank" class="social-btn glass"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="social-btn glass"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.ismamstudio.me" target="_blank" class="social-btn glass"><i class="fa-solid fa-globe"></i></a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper glass reveal">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name" class="contact-label">Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="contact-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="contact-label">Message</label>
+              <textarea id="message" name="message" class="form-input" placeholder="Hello Ismam, I'd like to talk about..." required></textarea>
+            </div>
+            <div class="form-status" id="form-status"></div>
+            <button type="submit" class="btn btn-primary">Transmit Signal <i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#home" class="logo">
+        <i class="fa-solid fa-code text-gradient"></i> Ismam<span>.dev</span>
+      </a>
+      <div class="copyright">
+        &copy; 2026 Ismam Abid. All rights reserved. CSE student at East Delta University.
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Link -->
+  <script src="script.js"></script>
+</body>
+</html>
